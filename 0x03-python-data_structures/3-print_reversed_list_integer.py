@@ -6,4 +6,4 @@ def print_reversed_list_integer(my_list=[]):
     i = 0
     while (i < len(xlist)):
         print("{:d}".format(xlist[i]))
-        i +=1
+        i += 1
