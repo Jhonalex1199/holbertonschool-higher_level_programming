@@ -3,6 +3,6 @@ def print_matrix_integer(matrix=[[]]):
     for i in matrix:
         end = ""
         for a in i:
-            print("{}{}".format(end, a), end="")
+            print("{:s}{:d}".format(end, a), end="")
             end = " "
         print()
