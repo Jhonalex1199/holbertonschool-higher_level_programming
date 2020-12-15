@@ -1,5 +1,5 @@
 def print_list_integer(my_list=[]):
     i = 0
-    while(i<len(my_list)):
+    while(i < len(my_list)):
         print("{}".format(my_list[i], end="\n"))
         i += 1
