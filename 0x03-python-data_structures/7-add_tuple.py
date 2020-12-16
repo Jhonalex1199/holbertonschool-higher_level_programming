@@ -6,7 +6,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     lena = len(tuple_a)
     lenb = len(tuple_b)
 
-    if lena > 2 and lenb > 2:
+    if lena > 2 or lenb > 2:
         lena = 2
         lenb = 2
 
@@ -14,4 +14,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
         list1[i] += tuple_a[i]
     for j in range(lenb):
         list2[j] += tuple_b[j]
+
     return (list1[0] + list2[0], list1[1] + list2[1])
