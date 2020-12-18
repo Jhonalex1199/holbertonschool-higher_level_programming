@@ -7,8 +7,8 @@ def roman_to_int(roman):
         return 0
 
     for x in range(len(roman)):
-            if x > 0 and num_romanos[roman[x]] > num_romanos[roman[x - 1]]:
-                res += num_romanos[roman[x]] - 2 * num_romanos[roman[x - 1]]
-            else:
-                res += num_romanos[roman[x]]
+        if x > 0 and num_romanos[roman[x]] > num_romanos[roman[x - 1]]:
+            res += num_romanos[roman[x]] - 2 * num_romanos[roman[x - 1]]
+        else:
+            res += num_romanos[roman[x]]
     return res
