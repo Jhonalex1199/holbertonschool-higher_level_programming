@@ -5,7 +5,7 @@
 class Square:
     """a documentation of my class"""
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """ private attribute : .__size """
         self.__size = size
         self.__position = position
@@ -58,10 +58,16 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """prints in stdout the square with the character #"""
-        if self.__size is 0:
-            return print()
+        """function that print the square with the character #: """
+        if self.__size == 0:
+            print()
+            return
+        for l in range(self.__position[1]):
+            print()
+
         for i in range(self.__size):
-            for a in range(self.__size):
+            for j in range(self.__position[0]):
+                print(" ", end="")
+            for k in range(self.__size):
                 print('#', end="")
             print()
