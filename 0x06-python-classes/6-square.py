@@ -5,9 +5,10 @@
 class Square:
     """a documentation of my class"""
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0,0)):
         """ private attribute : .__size """
         self.__size = size
+        self.__position = position
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
