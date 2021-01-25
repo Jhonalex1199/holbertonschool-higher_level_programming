@@ -68,3 +68,39 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """function that calculate the area of Rectangel"""
+        return self.height * self.width
+
+    def display(self):
+        """prints in stdout the Rectangle instance with the character #"""
+        for i in range(self.__y):
+            print()
+        for i in range(self.__height):
+            print(self.__x * " " + "#" * self.__width)
+
+    def __str__(self):
+        """string representation"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """"Update the class Rectangle"""
+        attr = ["id", "width", "height", "x", "y"]
+        if args:
+            for i in range(len(args)):
+                setattr(self, attr[i], args[i])
+        if kwargs is not None or args is None:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width
+            }
