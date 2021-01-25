@@ -25,3 +25,21 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width)
 
+    def update(self, *args, **kwargs):
+        """"Update the class Square"""
+        attr = ["id", "size", "x", "y"]
+        if args:
+            for i in range(len(args)):
+                setattr(self, attr[i], args[i])
+        if kwargs is not None or args is None:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Square"""
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'size': self.size
+            }
